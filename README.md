@@ -34,9 +34,15 @@ kubectl pod commands :
 
 ## Section 6 - Services
 
-Services are long running objects with IP address and stable fixed pods. A service can be attach to pods. 
+Services are long live entities with IP address and stable fixed pods. A service can be attach to pods. 
 A service can expose Kubernets's cluster pods, so we can access a webapp pod from a browser through a service. 
-We use service's selector to select/attach pods by pod's labels.
+
+We use service's selector to select/attach pods by pod's labels. The selector defines which pods are going to be represented by the service. The service becomes a network endpoint for either other services or external users (eg browser).
+
+### Types of Services
+- ClusterIP : service accessble only inside the cluster (eg regular microservices) 
+- NodePort : expose pod through the node. We can define a nodePort (ports section) for wich the service will be exposed (only ports above 30000 are allowed by Kubernets).
+- LoadBalancer : doesn't support local running
 
 API documentation for services : https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#service-v1-core
 
