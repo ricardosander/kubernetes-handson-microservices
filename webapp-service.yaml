@@ -1,0 +1,16 @@
+apiVersion: 1
+kind: Service
+metadata:
+  name: fleetman-webapp # very important name we will user to handle the service
+
+spec:
+  
+  selector:
+    app: webapp
+
+  ports:
+    - name : http
+      port : 80 #service port. Also pod port when targetPort not defined
+      nodePort: 30080 #port expose by NodePort to external use
+
+  type: NodePort
