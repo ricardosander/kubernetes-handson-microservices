@@ -16,6 +16,10 @@ Minikube commands :
 
 ## Section 5 - Pods
 
+"We treat pods like cattle, not like pets" - Richard Chesterwood
+
+It means we do not care about the pod itself. Pods are created, destroy and restart very frequently and we usually do not handle pods by ourselfs.
+
 A pod is the most basic concept of Kubernetes. A pod is kind like a wrapper to a container. For each cointainer we would have when using Docker we will have a pod on Kubernetes.
 Inside a pod we could have - alongside with the microservice, a helper or sidecar cointainer like a agent for logging, for example.
 We will NEVER have more than one microservice per pod.
@@ -27,6 +31,10 @@ API documentation for pods : https://kubernetes.io/docs/reference/generated/kube
 kubectl pod commands :
 - kubectl describe pod pod-name -> give all information about the pod (including historical events)
 - kubectl exec pod-name command -> execute a command into a pod
+
+## Section 6 - Services
+
+
 
 ## kubectl commands
 
