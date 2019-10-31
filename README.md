@@ -34,7 +34,11 @@ kubectl pod commands :
 
 ## Section 6 - Services
 
+Services are long running objects with IP address and stable fixed pods. A service can be attach to pods. 
+A service can expose Kubernets's cluster pods, so we can access a webapp pod from a browser through a service. 
+We use service's selector to select/attach pods by pod's labels.
 
+API documentation for services : https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#service-v1-core
 
 ## kubectl commands
 
