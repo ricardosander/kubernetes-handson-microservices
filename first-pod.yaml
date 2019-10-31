@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp #important name, use something representative
+spec:
+  containers:
+  - name: webapp #not really important for us, just the container name
+    image: richardchesterwood/k8s-fleetman-webapp-angular:release0
