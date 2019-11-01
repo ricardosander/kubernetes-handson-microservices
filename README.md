@@ -69,6 +69,13 @@ But with ReplicaSets, we define how many pods we want to still running and Kuber
 
 With ReplicaSets if any pod goes offline, one new one will be launch to always maintain the number of pods equals to the replicas from the ReplicaSet.
 
+### kubectl replicaset commands :
+- kubectl get replicaset -> list all replicaset
+- kubectl describe replicaset replicaset-name -> give all information about the replicaset
+- kubectl delete replicaset replicaset-name -> delete a replicaset by its name
+
+API documentation for replicaset : 
+
 ## kubectl commands
 
 - kubectl get all -> show everything defined on Kubernetes's cluster
