@@ -55,6 +55,10 @@ Labels and selector can be used to migrate versions, having 2 versions of the po
 
 API documentation for services : https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#service-v1-core
 
+## Section 7 - Pod and Services Exercise
+
+Creates a pod and a service to a ActiveMQ using richardchesterwood/k8s-fleetman-queue on release1. The container uses 8161 port and we want to expose port 30010 so we can access the message broker manager (admin/admin). 
+
 ## kubectl commands
 
 - kubectl get all -> show everything defined on Kubernetes's cluster
