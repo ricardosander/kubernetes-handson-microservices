@@ -10,7 +10,7 @@ spec:
     matchLabels:
       app: webapp
   
-  replicas: 1
+  replicas: 2
   
   template: # a template for the pod
 
