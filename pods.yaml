@@ -28,3 +28,18 @@ spec:
   containers:
   - name: webapp #not really important for us, just the container name
     image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
+
+--- 
+
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: queue 
+  labels: 
+    app: queue
+
+spec:
+  containers:
+  - name: queue
+    image: richardchesterwood/k8s-fleetman-queue:release1
