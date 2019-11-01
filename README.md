@@ -33,6 +33,7 @@ API documentation for pods : https://kubernetes.io/docs/reference/generated/kube
 - kubectl get pods --show--labels -> list all pods and its labels
 - kubectl get pods --show--labels -l label-name=label-value -> list all pods and its labels filtering by label
 - kubectl describe pod pod-name -> give all information about the pod (including historical events)
+- kubectl delete pod pod-name -> delete a pod by its name
 - kubectl exec pod-name command -> execute a command into a pod
 
 ## Section 6 - Services
@@ -47,6 +48,7 @@ Labels and selector can be used to migrate versions, having 2 versions of the po
 ### kubectl service commands :
 - kubectl get services -> list all services
 - kubectl describe service service-name -> give all information about the service, eg labels selected
+- kubectl delete service service-name -> delete a service by its name
 
 ### Types of Services
 - ClusterIP : service accessble only inside the cluster (eg regular microservices) 
@@ -58,6 +60,21 @@ API documentation for services : https://kubernetes.io/docs/reference/generated/
 ## Section 7 - Pod and Services Exercise
 
 Creates a pod and a service to a ActiveMQ using richardchesterwood/k8s-fleetman-queue on release1. The container uses 8161 port and we want to expose port 30010 so we can access the message broker manager (admin/admin). 
+
+## Section 8 - ReplicaSets
+
+Even using Kubernetes with pods and services, we still have to manage it by ourselfs. If a pod stop working we have to manually start it again.
+
+But with ReplicaSets, we define how many pods we want to still running and Kubernetes will do the managing for us. We don't need define the pod anymore, we define just a ReplicaSet, how many replicas of the pod we want and the  pod's template.
+
+With ReplicaSets if any pod goes offline, one new one will be launch to always maintain the number of pods equals to the replicas from the ReplicaSet.
+
+### kubectl replicaset commands :
+- kubectl get replicaset -> list all replicaset
+- kubectl describe replicaset replicaset-name -> give all information about the replicaset
+- kubectl delete replicaset replicaset-name -> delete a replicaset by its name
+
+API documentation for replicaset : 
 
 ## kubectl commands
 
